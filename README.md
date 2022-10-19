@@ -4,6 +4,22 @@ My setup files for [Neovim](https://neovim.io/)
 
 # Install
 
+Install the following packages:
+
+- `neovim`.
+
+Dependencies for some packages:
+
+- `Nerd Fonts`.
+- `ripgrep`.
+
+LSP servers for some languages:
+
+- `lua-language-server`.
+- `clangd`.
+- `cmake-languager-server`.
+- `pyright`.
+
 Make a backup of the current nvim folder if exists
 
 ```bash
