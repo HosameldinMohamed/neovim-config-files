@@ -16,6 +16,12 @@ if not typescript_setup then
 	return
 end
 
+-- import navic plugin safely
+local navic_setup, navic = pcall(require, "nvim-navic")
+if not navic_setup then
+	return
+end
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -41,6 +47,11 @@ local on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
 	end
+
+    -- option eneabled for nvim-navic
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
+    end
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
