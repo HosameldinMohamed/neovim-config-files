@@ -5,9 +5,9 @@ local colors = require "hosameldin.config.colors"
 local navic = require "nvim-navic"
 local utils = require "hosameldin.utils.useful-functions"
 
-vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.grey })
-vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.grey })
-vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.green, bg = colors.grey })
+vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.black })
+vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.black })
+vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.green, bg = colors.black })
 
 M.winbar_filetype_exclude = {
   "help",
@@ -56,16 +56,16 @@ function M.get_winbar()
 
   if navic.is_available() then
     return "%#WinBarSeparator#"
-      .. "%="
       .. ""
       .. "%*"
       .. get_modified()
       .. get_location()
       .. "%#WinBarSeparator#"
       .. ""
+      .. "%="
       .. "%*"
   else
-    return "%#WinBarSeparator#" .. "%=" .. "" .. "%*" .. get_modified() .. "%#WinBarSeparator#" .. "" .. "%*"
+    return "%#WinBarSeparator#" .. "" .. "%*" .. get_modified() .. "%#WinBarSeparator#" .. "" .. "%=" .. "%*"
   end
 end
 
