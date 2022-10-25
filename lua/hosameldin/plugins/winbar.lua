@@ -1,40 +1,72 @@
-local status, winbar = pcall(require, "winbar")
-if not status then
-    return
+local M = {}
+
+local icons = require "hosameldin.config.icons"
+local colors = require "hosameldin.config.colors"
+local navic = require "nvim-navic"
+local utils = require "hosameldin.utils.useful-functions"
+
+vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.grey })
+vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.grey })
+vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.green, bg = colors.grey })
+
+M.winbar_filetype_exclude = {
+  "help",
+  "startify",
+  "dashboard",
+  "packer",
+  "neogitstatus",
+  "NvimTree",
+  "Trouble",
+  "alpha",
+  "lir",
+  "Outline",
+  "spectre_panel",
+  "toggleterm",
+}
+
+local excludes = function()
+  if vim.tbl_contains(M.winbar_filetype_exclude, vim.bo.filetype) then
+    vim.opt_local.winbar = nil
+    return true
+  end
+  return false
 end
 
-winbar.setup({
-    enabled = true,
+local function get_modified()
+  if utils.get_buf_option "mod" then
+    local mod = icons.git.Mod
+    return "%#WinBarFilename#" .. mod .. " " .. "%t" .. "%*"
+  end
+  return "%#WinBarFilename#" .. "%t" .. "%*"
+end
 
-    show_file_path = true,
-    show_symbols = true,
+local function get_location()
+  local location = navic.get_location()
+  if not utils.is_empty(location) then
+    return "%#WinBarContext#" .. " " .. icons.ui.ChevronRight .. " " .. location .. "%*"
+  end
+  return ""
+end
 
-    colors = {
-        path = '', -- You can customize colors like #c946fd
-        file_name = '',
-        symbols = '',
-    },
+function M.get_winbar()
+  -- Use lualine disable file types
+  -- if excludes() then
+  --   return ""
+  -- end
 
-    icons = {
-        file_icon_default = '',
-        seperator = '>',
-        editor_state = '●',
-        lock_icon = '',
-    },
+  if navic.is_available() then
+    return "%#WinBarSeparator#"
+      .. "%="
+      .. ""
+      .. "%*"
+      .. get_modified()
+      .. get_location()
+      .. "%#WinBarSeparator#"
+      .. ""
+      .. "%*"
+  else
+    return "%#WinBarSeparator#" .. "%=" .. "" .. "%*" .. get_modified() .. "%#WinBarSeparator#" .. "" .. "%*"
+  end
+end
 
-    exclude_filetype = {
-        'help',
-        'startify',
-        'dashboard',
-        'packer',
-        'neogitstatus',
-        'NvimTree',
-        'Trouble',
-        'alpha',
-        'lir',
-        'Outline',
-        'spectre_panel',
-        'toggleterm',
-        'qf',
-    }
-})
+return M

@@ -96,8 +96,7 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
     use("kdheepak/lazygit.nvim")
 
-    -- Winbar
-    use("fgheng/winbar.nvim")
+    -- nvim-navic
     use {
         "SmiteshP/nvim-navic",
         requires = "neovim/nvim-lspconfig"
