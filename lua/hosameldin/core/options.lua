@@ -1,4 +1,5 @@
 local opt = vim.opt -- for conciseness
+local g = vim.g -- for conciseness
 
 -- line numbers
 opt.relativenumber = true
@@ -36,3 +37,8 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+-- iamcco/markdown-preview.nvim
+g.mkdp_auto_start = true
+g.mkdp_echo_preview_url = true
+
