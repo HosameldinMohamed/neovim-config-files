@@ -15,6 +15,13 @@ treesitter.setup({
 	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },
+    -- rainbow parentheses
+    rainbow = {
+        enable = true,
+        -- disable = { "cpp" },
+        extended_mode = true,
+        max_file_lines = nil,
+    },
 	-- ensure these language parsers are installed
 	ensure_installed = {
 		"json",
