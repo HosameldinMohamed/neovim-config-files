@@ -44,3 +44,6 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 -- LazyGit
 keymap.set("n", "<leader>gg", ":LazyGit<CR>") -- Open LazyGit
 
+-- spellcheck
+keymap.set("n", "<leader>sp", ":set spell!<CR>")
+
