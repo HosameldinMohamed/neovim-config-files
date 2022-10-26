@@ -9,6 +9,7 @@ treesitter.setup({
 	-- enable syntax highlighting
 	highlight = {
 		enable = true,
+		disable = { "markdown" }, -- it doesn't seem to highlight right!
 	},
 	-- enable indentation
 	indent = { enable = true },
@@ -24,6 +25,7 @@ treesitter.setup({
 		"html",
 		"css",
 		"markdown",
+		"markdown_inline",
 		"svelte",
 		"graphql",
 		"bash",
