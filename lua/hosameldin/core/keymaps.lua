@@ -47,3 +47,23 @@ keymap.set("n", "<leader>gg", ":LazyGit<CR>") -- Open LazyGit
 -- spellcheck
 keymap.set("n", "<leader>sp", ":set spell!<CR>")
 
+-- Harpoon
+-- toggle menu
+keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+-- add file
+keymap.set("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
+-- Navigate to file 1
+keymap.set("n", "<leader>h1", ":lua require('harpoon.ui').nav_file(1)<CR>")
+-- Navigate to file 2
+keymap.set("n", "<leader>h2", ":lua require('harpoon.ui').nav_file(2)<CR>")
+-- Navigate to file 3
+keymap.set("n", "<leader>h3", ":lua require('harpoon.ui').nav_file(3)<CR>")
+-- Navigate to file 4
+keymap.set("n", "<leader>h4", ":lua require('harpoon.ui').nav_file(4)<CR>")
+-- Navigate to next file
+keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>")
+-- Navigate to previous file
+keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>")
+-- Navigate to terminal 1
+keymap.set("n", "<leader>ht", ":lua require('harpoon.term').gotoTerminal(1)<CR>")
+

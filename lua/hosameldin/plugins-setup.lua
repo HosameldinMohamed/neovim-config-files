@@ -114,6 +114,9 @@ return packer.startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    -- Harpoon
+    use("ThePrimeagen/harpoon")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
