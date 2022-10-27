@@ -8,10 +8,11 @@ Install the following packages:
 
 - `neovim`.
 
-Dependencies for some packages:
+Dependencies for some plugins:
 
 - `Nerd Fonts`.
 - `ripgrep`.
+- `lazygit`.
 
 LSP servers for some languages:
 
@@ -32,6 +33,10 @@ Clone the repository
 git clone https://github.com/HosameldinMohamed/neovim-config-files.git ~/.config/nvim
 nvim +PackerSync
 ```
+
+### Notes
+
+- When running on `Wayland`, you need to install `wl-clipboard` for clipboard synching.
 
 # Thanks
 
