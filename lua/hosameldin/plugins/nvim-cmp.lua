@@ -31,7 +31,7 @@ cmp.setup({
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
-            vim.fn["UltiSnip#Anon"](args.body)
+            -- vim.fn["UltiSnip#Anon"](args.body)
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -72,7 +72,7 @@ cmp.setup({
 		{ name = "luasnip" }, -- snippets
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
-		{ name = "ultisnips" },
+		-- { name = "ultisnips" },
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {
