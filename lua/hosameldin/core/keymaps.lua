@@ -26,6 +26,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 -- The paste remap (Cool!)
 keymap.set("v", "p", "\"_dP")
 
+-- New line without insert mode
+keymap.set("n", "<CR>", "i<CR><ESC>")
+
 -- plugin keymaps
 
 -- vim-maximizer
