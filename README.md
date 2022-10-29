@@ -21,6 +21,8 @@ LSP servers for some languages:
 - `cmake-languager-server`.
 - `pyright`.
 
+Also `npm` package manager for [`Mason`](https://github.com/williamboman/mason.nvim) to automatically download and install LSP servers and linters.
+
 Make a backup of the current nvim folder if exists
 
 ```bash
