@@ -24,6 +24,11 @@ keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
 keymap.set("n", "<C-Up>", ":resize +3<CR>")
 keymap.set("n", "<C-Down>", ":resize -3<CR>")
 
+-- Splits with terminal
+keymap.set("n", "<leader>tv", ":vs|:terminal<CR>") -- Open terminal with vertical split
+keymap.set("n", "<leader>th", ":sp|:terminal<CR>") -- Open terminal with horizontal split
+keymap.set("t", "kj", "<C-\\><C-n>") -- Go to normal mode inside terminal
+
 -- Manage tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
