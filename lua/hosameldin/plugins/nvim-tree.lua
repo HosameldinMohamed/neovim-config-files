@@ -24,9 +24,12 @@ nvimtree.setup({
                 git = {
                     unstaged = " ",
                     deleted = " ",
+                    untracked = "★ ",
+                    unmerged = " ",
                 },
 			},
 		},
+        highlight_git = false,
 	},
     diagnostics = {
         enable = true,
