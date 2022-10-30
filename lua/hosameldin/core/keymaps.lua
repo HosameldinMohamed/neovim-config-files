@@ -13,11 +13,18 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
+-- Manage splits
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
+keymap.set("n", "<C-Left>", ":vertical resize +3<CR>")
+keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
+keymap.set("n", "<C-Up>", ":resize +3<CR>")
+keymap.set("n", "<C-Down>", ":resize -3<CR>")
+
+-- Manage tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
