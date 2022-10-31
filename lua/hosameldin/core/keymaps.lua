@@ -38,6 +38,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 -- The paste remap (Cool!)
 keymap.set("v", "p", "\"_dP")
 
+-- Delete without saving in register
+keymap.set("v", "<leader>d", "\"_d")
+
 -- plugin keymaps
 
 -- vim-maximizer
