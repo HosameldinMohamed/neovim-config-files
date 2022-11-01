@@ -43,3 +43,7 @@ opt.iskeyword:append("-")
 g.mkdp_auto_start = true
 g.mkdp_echo_preview_url = true
 
+-- Nightfly
+g.nightflyTransparent = false -- default value
+g.nightflyTerminalColors = false
+
