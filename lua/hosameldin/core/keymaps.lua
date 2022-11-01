@@ -32,7 +32,7 @@ keymap.set("n", "<leader>th", ":sp|:terminal<CR>") -- Open terminal with horizon
 -- Only if you are inside "bash" termianl
 -- otherwise do nothing..
 keymap.set("t", "kj", function ()
-    return vim.fs.basename(vim.api.nvim_buf_get_name(0)) == "bash" and "<C-\\><C-n>" or "<Nop>"
+    return vim.fs.basename(vim.api.nvim_buf_get_name(0)) == "bash" and "<C-\\><C-n>" or ""
 end, { expr = true })
 
 -- Manage tabs
