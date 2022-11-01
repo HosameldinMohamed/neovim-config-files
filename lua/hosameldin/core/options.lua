@@ -42,6 +42,7 @@ opt.iskeyword:append("-")
 -- iamcco/markdown-preview.nvim
 g.mkdp_auto_start = true
 g.mkdp_echo_preview_url = true
+g.mkdp_theme = 'dark'
 
 -- Nightfly
 g.nightflyTransparent = false -- default value
