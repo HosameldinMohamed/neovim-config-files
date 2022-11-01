@@ -41,6 +41,10 @@ keymap.set("v", "p", "\"_dP")
 -- Delete without saving in register
 keymap.set("v", "<leader>d", "\"_d")
 
+-- Indent, staying in Visual Mode
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+
 -- plugin keymaps
 
 -- vim-maximizer
