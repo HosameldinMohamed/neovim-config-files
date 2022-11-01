@@ -27,7 +27,13 @@ keymap.set("n", "<C-Down>", ":resize -3<CR>")
 -- Splits with terminal
 keymap.set("n", "<leader>tv", ":vs|:terminal<CR>") -- Open terminal with vertical split
 keymap.set("n", "<leader>th", ":sp|:terminal<CR>") -- Open terminal with horizontal split
-keymap.set("t", "kj", "<C-\\><C-n>") -- Go to normal mode inside terminal
+
+-- Go from terminal mode to normal mode
+-- Only if you are inside "bash" termianl
+-- otherwise do nothing..
+keymap.set("t", "kj", function ()
+    return vim.fs.basename(vim.api.nvim_buf_get_name(0)) == "bash" and "<C-\\><C-n>" or "<Nop>"
+end, { expr = true })
 
 -- Manage tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
