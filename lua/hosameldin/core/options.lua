@@ -48,3 +48,7 @@ g.mkdp_theme = 'dark'
 g.nightflyTransparent = false -- default value
 g.nightflyTerminalColors = false
 
+-- VimTex
+g.vimtex_view_method = 'zathura'
+-- g.vimtex_view_general_viewer = 'okular'
+

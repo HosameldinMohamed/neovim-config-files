@@ -59,6 +59,7 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-omni")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip")
@@ -113,6 +114,9 @@ return packer.startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+
+    -- Latex support
+    use("lervag/vimtex")
 
     -- Harpoon
     use("ThePrimeagen/harpoon")
