@@ -12,7 +12,7 @@ treesitter.setup({
 		disable = { "markdown" }, -- it doesn't seem to highlight right!
 	},
 	-- enable indentation
-	indent = { enable = true },
+	indent = { enable = false },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },
     -- rainbow parentheses
