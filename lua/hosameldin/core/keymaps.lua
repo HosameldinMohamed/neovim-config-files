@@ -13,7 +13,7 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
-keymap.set("n", "<C-s>", ":w")
+keymap.set("n", "<C-s>", ":w<CR>")
 
 -- Manage splits
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
