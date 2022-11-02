@@ -26,6 +26,9 @@ nvimtree.setup({
                     deleted = " ",
                     untracked = "★ ",
                     unmerged = " ",
+                    staged = "✓",
+                    renamed = "➜",
+                    ignored = "",
                 },
 			},
 		},
@@ -38,6 +41,9 @@ nvimtree.setup({
       },
     diagnostics = {
         enable = true,
+    },
+    git = {
+        ignore = false,
     },
 	-- disable window_picker for
 	-- explorer to work well with
