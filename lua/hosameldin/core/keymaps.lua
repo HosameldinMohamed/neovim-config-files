@@ -13,7 +13,12 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
+-- Save file shortcut
 keymap.set("n", "<C-s>", ":w<CR>")
+
+-- Center cursor when moving half page
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- Manage splits
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
