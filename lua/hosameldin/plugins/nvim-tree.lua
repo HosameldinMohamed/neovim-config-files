@@ -33,6 +33,7 @@ nvimtree.setup({
 			},
 		},
         highlight_git = false,
+        highlight_opened_files = "all",
 	},
     update_focused_file = {
         enable = true,

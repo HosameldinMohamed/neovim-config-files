@@ -14,4 +14,5 @@ require("hosameldin.plugins.lsp.null-ls")
 require("hosameldin.plugins.treesitter")
 require("hosameldin.plugins.autopairs")
 require("hosameldin.plugins.gitsigns")
+require("hosameldin.plugins.auto-save")
 

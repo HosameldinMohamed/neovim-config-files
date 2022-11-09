@@ -26,6 +26,23 @@ lualine.setup {
       },
     },
   },
+  sections = {
+      lualine_a = { {
+          'mode',
+          icons_enabled = true,
+          icon = nil,
+      } },
+      lualine_c = { {
+          'filename',
+          path = 1,
+          symbols = {
+              modified = '[פֿ ]',
+              readonly = '[]',
+              newfile = '[ ]',
+              unnamed = '[ ]',
+          },
+      }, },
+  },
   winbar = {
     lualine_a = { "mode" },
     lualine_b = { { "filetype" , icon_only = true } },

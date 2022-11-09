@@ -121,6 +121,9 @@ return packer.startup(function(use)
     -- Harpoon
     use("ThePrimeagen/harpoon")
 
+    -- Auto-save
+    use("Pocco81/auto-save.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
