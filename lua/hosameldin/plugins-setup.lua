@@ -115,6 +115,9 @@ return packer.startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    -- Markdown TOC generation
+    use("mzlogin/vim-markdown-toc")
+
     -- Latex support
     use("lervag/vimtex")
 
