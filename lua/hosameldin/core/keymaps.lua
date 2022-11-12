@@ -58,6 +58,10 @@ keymap.set("v", "<leader>d", "\"_d")
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
+-- Move selection up and down
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- plugin keymaps
 
 -- vim-maximizer
