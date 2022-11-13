@@ -1,5 +1,6 @@
 local opt = vim.opt -- for conciseness
 local g = vim.g -- for conciseness
+local api = vim.api -- for conciseness
 
 -- line numbers
 opt.relativenumber = true
@@ -32,6 +33,9 @@ opt.backspace = "indent,eol,start"
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
+
+-- updatetime
+api.nvim_set_option('updatetime', 100)
 
 -- split windows
 opt.splitright = true
