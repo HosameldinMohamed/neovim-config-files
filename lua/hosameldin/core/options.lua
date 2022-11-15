@@ -34,9 +34,6 @@ opt.backspace = "indent,eol,start"
 -- clipboard
 opt.clipboard:append("unnamedplus")
 
--- updatetime
-api.nvim_set_option('updatetime', 100)
-
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
