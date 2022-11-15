@@ -49,6 +49,19 @@ g.mkdp_theme = 'dark'
 g.nightflyTransparent = false -- default value
 g.nightflyTerminalColors = false
 
+-- Nightfly override highlight with vim-Illuminate
+local regal_blue = "#1d3b53"
+local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "nightfly",
+    callback = function()
+        vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = regal_blue })
+        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = regal_blue })
+        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = regal_blue })
+    end,
+    group = custom_highlight,
+})
+
 -- VimTex
 g.vimtex_view_method = 'zathura'
 -- g.vimtex_view_general_viewer = 'okular'
