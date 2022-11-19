@@ -20,6 +20,7 @@ LSP servers for some languages:
 - `clangd`.
 - `cmake-languager-server`.
 - `pyright`.
+- `qml-lsp` (`qt6-languageserver`).
 
 Also `npm` package manager for [`Mason`](https://github.com/williamboman/mason.nvim) to automatically download and install LSP servers and linters.
 

@@ -4,6 +4,12 @@ if not lspconfig_status then
 	return
 end
 
+-- import lspconfig.configs plugin safely
+local configs_status, configs = pcall(require, "lspconfig.configs")
+if not configs_status then
+	return
+end
+
 -- import cmp-nvim-lsp plugin safely
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
@@ -114,6 +120,20 @@ lspconfig["marksman"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+
+-- configure qml_lsp server
+configs["qml_lsp"] = {
+    default_config = {
+        cmd = { "/usr/lib/qt6/bin/qmlls" },
+        filetypes = { "qmljs" },
+        root_dir = function(fname)
+            return lspconfig.util.find_git_ancestor(fname)
+        end,
+        single_file_support = true,
+        on_attach = on_attach,
+    },
+}
+lspconfig["qml_lsp"].setup({})
 
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({
