@@ -16,4 +16,5 @@ require("hosameldin.plugins.autopairs")
 require("hosameldin.plugins.gitsigns")
 require("hosameldin.plugins.auto-save")
 require("hosameldin.plugins.vim-illuminate")
+require("hosameldin.core.filetype")
 
