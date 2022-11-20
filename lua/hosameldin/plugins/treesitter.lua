@@ -47,6 +47,7 @@ treesitter.setup({
 		"python",
 		"latex",
 		"bibtex",
+		"qmljs",
 	},
 	-- auto install above language parsers
 	auto_install = true,
