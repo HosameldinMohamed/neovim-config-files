@@ -104,7 +104,7 @@ keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>")
 keymap.set("n", "<leader>ht", ":lua require('harpoon.term').gotoTerminal(1)<CR>")
 
 -- Auto-save
-keymap.set("n", "<leader>n", ":ASToggle<CR>")
+keymap.set("n", "<leader>a", ":ASToggle<CR>")
 
 -- vim-illuminate
 keymap.set("n", "<leader>hl", ":IlluminateToggle<CR>")
