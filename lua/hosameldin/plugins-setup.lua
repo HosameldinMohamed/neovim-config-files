@@ -132,6 +132,9 @@ return packer.startup(function(use)
     -- Auto-save
     use("Pocco81/auto-save.nvim")
 
+    -- Git blame
+    use("APZelos/blamer.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
