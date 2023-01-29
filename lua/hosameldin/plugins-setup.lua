@@ -145,6 +145,13 @@ return packer.startup(function(use)
     -- Git blame
     use("APZelos/blamer.nvim")
 
+    -- colorful-window seperator
+    use{"nvim-zh/colorful-winsep.nvim",
+        config = function ()
+            require('colorful-winsep').setup()
+        end
+    }
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
