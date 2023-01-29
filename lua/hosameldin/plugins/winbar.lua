@@ -5,9 +5,9 @@ local colors = require "hosameldin.config.colors"
 local navic = require "nvim-navic"
 local utils = require "hosameldin.utils.useful-functions"
 
-vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.black })
-vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.black })
-vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.green, bg = colors.black })
+vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.darker_black })
+vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.darker_black })
+vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.white, bg = colors.darker_black })
 
 M.winbar_filetype_exclude = {
   "help",
