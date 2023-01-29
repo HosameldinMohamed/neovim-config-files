@@ -83,7 +83,11 @@ return packer.startup(function(use)
         "glepnir/lspsaga.nvim",
         branch = "main",
         config = function()
-            require('lspsaga').setup({})
+            require('lspsaga').setup({
+                symbol_in_winbar = {
+                    enable = false,
+                },
+            })
         end,
     })
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
