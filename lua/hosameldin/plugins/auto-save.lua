@@ -6,6 +6,6 @@ end
 
 -- configure auto-save
 autosave.setup({
-    enabled = false, -- disabled by default
+    enabled = true, -- enabled by default
 })
 
