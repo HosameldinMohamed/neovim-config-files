@@ -16,6 +16,9 @@ keymap.set("n", "<leader>-", "<C-x>")
 -- Save file shortcut
 keymap.set("n", "<C-s>", ":w<CR>")
 
+-- Quick close (no save)
+keymap.set("n", "qq", ":q!<CR>")
+
 -- Center cursor when moving half page
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
