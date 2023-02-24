@@ -39,6 +39,7 @@ nvim +PackerSync
 
 ### Notes
 
+- When running on `Xorg`, you need to install `xclip` for clipboard synching.
 - When running on `Wayland`, you need to install `wl-clipboard` for clipboard synching.
 
 # Thanks
