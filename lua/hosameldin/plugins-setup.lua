@@ -149,6 +149,9 @@ return packer.startup(function(use)
     -- Scrollbar
     use("petertriho/nvim-scrollbar")
 
+    -- Nvim-hlslens
+    use ("kevinhwang91/nvim-hlslens")
+
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
         config = function ()
