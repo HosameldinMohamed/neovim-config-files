@@ -115,6 +115,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
     use("kdheepak/lazygit.nvim")
 
     -- nvim-navic
@@ -144,6 +145,9 @@ return packer.startup(function(use)
 
     -- Git blame
     use("APZelos/blamer.nvim")
+
+    -- Scrollbar
+    use("petertriho/nvim-scrollbar")
 
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
