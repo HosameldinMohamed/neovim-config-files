@@ -54,6 +54,7 @@ nvimtree.setup({
 			window_picker = {
 				enable = false,
 			},
+            resize_window = false;
 		},
 	},
 })
