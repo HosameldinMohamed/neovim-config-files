@@ -152,6 +152,9 @@ return packer.startup(function(use)
     -- Nvim-hlslens
     use ("kevinhwang91/nvim-hlslens")
 
+    -- DiffView
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
         config = function ()

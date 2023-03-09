@@ -114,3 +114,6 @@ keymap.set("n", "<leader>hl", ":IlluminateToggle<CR>")
 
 -- Git blame - blamer
 keymap.set("n", "<leader>b", ":BlamerToggle<CR>")
+
+-- DiffView
+keymap.set("n", "<leader>d", ":DiffviewOpen<CR>")
