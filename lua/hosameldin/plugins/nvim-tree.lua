@@ -14,6 +14,9 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 -- configure nvim-tree
 nvimtree.setup({
 	-- change folder arrow icons
+    view = {
+    width = 50,
+    },
 	renderer = {
 		icons = {
 			glyphs = {
@@ -54,7 +57,7 @@ nvimtree.setup({
 			window_picker = {
 				enable = false,
 			},
-            resize_window = false;
+            resize_window = true;
 		},
 	},
 })
