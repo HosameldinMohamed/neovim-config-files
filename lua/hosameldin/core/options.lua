@@ -64,5 +64,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- VimTex
 g.vimtex_view_method = 'zathura'
+g.Tex_FoldedSections     = ""
+g.Tex_FoldedEnvironments = ""
+g.Tex_FoldedMisc         = ""
 -- g.vimtex_view_general_viewer = 'okular'
 
