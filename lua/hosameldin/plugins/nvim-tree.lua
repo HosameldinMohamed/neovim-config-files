@@ -48,7 +48,7 @@ nvimtree.setup({
         enable = true,
     },
     git = {
-        ignore = false,
+        ignore = true,
     },
 	-- disable window_picker for
 	-- explorer to work well with
