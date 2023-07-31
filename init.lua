@@ -17,5 +17,6 @@ require("hosameldin.plugins.scrollbar")
 require("hosameldin.plugins.gitsigns")
 require("hosameldin.plugins.auto-save")
 require("hosameldin.plugins.vim-illuminate")
+require("hosameldin.plugins.harpoon")
 require("hosameldin.core.filetype")
 
