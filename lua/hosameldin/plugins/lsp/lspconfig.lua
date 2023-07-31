@@ -123,6 +123,20 @@ lspconfig["marksman"].setup({
 	on_attach = on_attach,
 })
 
+-- configure matlab_ls server
+lspconfig["matlab_ls"].setup({
+	-- capabilities = capabilities,
+	-- on_attach = on_attach,
+    settings = {
+        matlab = {
+            indexWorkspace = false,
+            installPath = "/run/media/hosameldin/HosamVolume/MATLAB/R2021b",
+            matlabConnectionTiming = "onStart",
+            telemetry = false
+        }
+    }
+})
+
 -- configure qml_lsp server
 configs["qml_lsp"] = {
     default_config = {
