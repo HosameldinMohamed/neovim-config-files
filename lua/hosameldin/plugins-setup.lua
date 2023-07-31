@@ -146,6 +146,9 @@ return packer.startup(function(use)
     -- DiffView
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
+    -- indent-blankline
+    use {"lukas-reineke/indent-blankline.nvim"}
+
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
         config = function ()
