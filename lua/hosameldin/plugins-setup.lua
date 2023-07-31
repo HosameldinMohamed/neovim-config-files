@@ -149,6 +149,19 @@ return packer.startup(function(use)
     -- indent-blankline
     use {"lukas-reineke/indent-blankline.nvim"}
 
+    -- octo (GitHub plugin)
+    use {
+      "pwntester/octo.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim",
+        "nvim-tree/nvim-web-devicons",
+      },
+      config = function ()
+        require"octo".setup()
+      end
+    }
+
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
         config = function ()
