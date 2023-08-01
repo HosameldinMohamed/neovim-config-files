@@ -125,11 +125,11 @@ lspconfig["marksman"].setup({
 
 -- configure matlab_ls server
 lspconfig["matlab_ls"].setup({
-	-- capabilities = capabilities,
-	-- on_attach = on_attach,
+	capabilities = capabilities,
+	on_attach = on_attach,
     settings = {
         matlab = {
-            indexWorkspace = false,
+            indexWorkspace = true,
             installPath = os.getenv("MATLAB_INSTALL_PATH"),
             matlabConnectionTiming = "onStart",
             telemetry = false
