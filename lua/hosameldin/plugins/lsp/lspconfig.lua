@@ -130,7 +130,7 @@ lspconfig["matlab_ls"].setup({
     settings = {
         matlab = {
             indexWorkspace = false,
-            installPath = "/run/media/hosameldin/HosamVolume/MATLAB/R2021b",
+            installPath = os.getenv("MATLAB_INSTALL_PATH"),
             matlabConnectionTiming = "onStart",
             telemetry = false
         }

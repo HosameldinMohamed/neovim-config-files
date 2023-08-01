@@ -41,6 +41,7 @@ nvim +PackerSync
 
 - When running on `Xorg`, you need to install `xclip` for clipboard synching.
 - When running on `Wayland`, you need to install `wl-clipboard` for clipboard synching.
+- For MATLAB LSP you need to set the environment variable `$MATLAB_INSTALL_PATH` with the location of MATLAB installation.
 
 # Thanks
 
