@@ -74,6 +74,7 @@ cmp.setup({
 		{ name = "path" }, -- file system paths
 		-- { name = "ultisnips" },
         { name = 'omni', }, -- vimtex
+        { name = 'nvim_lsp_signature_help', }, -- Functions signature
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {
