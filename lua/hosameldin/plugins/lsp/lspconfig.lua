@@ -28,6 +28,12 @@ if not navic_setup then
 	return
 end
 
+-- import lsp_signature plugin safely
+local signature_setup, signature = pcall(require, "lsp_signature")
+if not signature_setup then
+	return
+end
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -60,6 +66,15 @@ local on_attach = function(client, bufnr)
     if client.server_capabilities.documentSymbolProvider then
         navic.attach(client, bufnr)
     end
+
+    -- functions signature
+    signature.on_attach({
+        bind = true, -- This is mandatory, otherwise border config won't get registered.
+        handler_opts = {
+            border = "rounded"
+        }
+    }, bufnr)
+
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
