@@ -22,6 +22,7 @@ vim.filetype.add({
         -- frag = "glsl",
         -- rkt = "racket",
         urdf = "xml",
+        scxml = "xml",
     },
     filename = {
         -- environment = "dosini",
