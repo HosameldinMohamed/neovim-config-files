@@ -38,7 +38,7 @@ lualine.setup {
             path = 1,
             symbols = {
                 modified = icons.ui.Pencil,
-                readonly = icons.ui.lock,
+                readonly = icons.ui.Lock,
                 newfile = icons.ui.NewFile,
                 unnamed = icons.ui.Question,
             },
