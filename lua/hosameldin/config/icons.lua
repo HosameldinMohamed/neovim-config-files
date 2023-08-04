@@ -46,7 +46,7 @@ return {
         Add = " ",
         Diff = " ",
         Ignore = " ",
-        Mod = "פֿ ",
+        Mod = " ",
         Remove = " ",
         Rename = " ",
         Repo = " ",
