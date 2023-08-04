@@ -30,7 +30,8 @@ return packer.startup(function(use)
     use("nvim-lua/plenary.nvim")
 
     use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-    -- use("folke/tokyonight.nvim")
+    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
+    use("folke/tokyonight.nvim")
     use("ellisonleao/gruvbox.nvim")
     use("rebelot/kanagawa.nvim")
     use({"catppuccin/nvim", as = "catppuccin"})
