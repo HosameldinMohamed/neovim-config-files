@@ -4,6 +4,7 @@ if not status then
 end
 
 local winbar = require("hosameldin.plugins.winbar")
+local icons = require("hosameldin.config.icons")
 local colors = require("hosameldin.config.colors")
 
 lualine.setup {
@@ -36,10 +37,10 @@ lualine.setup {
             'filename',
             path = 1,
             symbols = {
-                modified = '[פֿ ]',
-                readonly = '[]',
-                newfile = '[ ]',
-                unnamed = '[ ]',
+                modified = icons.ui.Pencil,
+                readonly = icons.ui.lock,
+                newfile = icons.ui.NewFile,
+                unnamed = icons.ui.Question,
             },
         }, },
     },
@@ -49,12 +50,7 @@ lualine.setup {
         lualine_c = { winbar.get_winbar },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { { "diagnostics" , diagnostics_color = {
-            error = 'DiagnosticError', -- Changes diagnostics' error color.
-            warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-            info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-            hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
-        } } },
+        lualine_z = {},
     },
     inactive_winbar = {
         lualine_a = { "mode" },
@@ -62,12 +58,7 @@ lualine.setup {
         lualine_c = { winbar.get_winbar },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { { "diagnostics" , diagnostics_color = {
-            error = 'DiagnosticError', -- Changes diagnostics' error color.
-            warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-            info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-            hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
-        } } },
+        lualine_z = {},
     },
 }
 

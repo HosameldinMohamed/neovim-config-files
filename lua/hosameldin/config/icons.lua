@@ -29,6 +29,7 @@ return {
         SignIn = " ",
         Table = " ",
         Telescope = " ",
+        Question = " ",
     },
     diagnostics = {
         Error = " ",

@@ -4,6 +4,10 @@ local icons = require "hosameldin.config.icons"
 local colors = require "hosameldin.config.colors"
 local navic = require "nvim-navic"
 local utils = require "hosameldin.utils.useful-functions"
+local options = {
+  section_separators = { left = '', right = '' },
+  component_separators = { left = '', right = '' }
+}
 
 vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.darker_black })
 vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.darker_black })
@@ -56,16 +60,23 @@ function M.get_winbar()
 
     if navic.is_available() then
         return "%#WinBarSeparator#"
-        .. ""
+        .. options.section_separators.right
         .. "%*"
         .. get_modified()
         .. get_location()
         .. "%#WinBarSeparator#"
-        .. ""
+        .. options.section_separators.left
+        -- .. "%="
+        -- .. "%*"
+    else
+        return "%#WinBarSeparator#"
+        .. options.section_separators.right
+        .. "%*"
+        .. get_modified()
+        .. "%#WinBarSeparator#"
+        .. options.section_separators.left
         .. "%="
         .. "%*"
-    else
-        return "%#WinBarSeparator#" .. "" .. "%*" .. get_modified() .. "%#WinBarSeparator#" .. "" .. "%=" .. "%*"
     end
 end
 
