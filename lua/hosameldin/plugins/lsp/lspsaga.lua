@@ -1,7 +1,7 @@
 -- import lspsaga safely
 local saga_status, saga = pcall(require, "lspsaga")
 if not saga_status then
-	return
+    return
 end
 
 saga.setup({
@@ -9,7 +9,7 @@ saga.setup({
     -- refer to https://dev.neovim.pro/lspsaga/finder/
     finder = {
         keys = {
-        vsplit = 'v'
+            vsplit = 'v'
         }
     },
     symbol_in_winbar = {

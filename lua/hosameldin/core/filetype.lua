@@ -33,7 +33,7 @@ vim.filetype.add({
         -- [".gitignore"] = "gitignore",
     },
     -- pattern = {
-    --     ["environment.*"] = "dosini",
-    --     ["grub.*"] = "dosini",
-    -- },
-})
+        --     ["environment.*"] = "dosini",
+        --     ["grub.*"] = "dosini",
+        -- },
+    })

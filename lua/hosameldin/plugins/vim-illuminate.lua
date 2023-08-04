@@ -1,7 +1,7 @@
 -- import nvim-cmp plugin safely
 local illuminate_status, illuminate = pcall(require, "illuminate")
 if not illuminate_status then
-	return
+    return
 end
 
 -- default configuration
