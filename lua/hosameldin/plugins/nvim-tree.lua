@@ -26,10 +26,10 @@ nvimtree.setup({
                     arrow_open = "", -- arrow when folder is open
                 },
                 git = {
-                    unstaged = " ",
-                    deleted = " ",
-                    untracked = "★ ",
-                    unmerged = " ",
+                    unstaged = "",
+                    deleted = "",
+                    untracked = "★",
+                    unmerged = "",
                     staged = "✓",
                     renamed = "➜",
                     ignored = "",
