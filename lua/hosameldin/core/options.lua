@@ -41,7 +41,7 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 -- iamcco/markdown-preview.nvim
-g.mkdp_auto_start = true
+g.mkdp_auto_start = false
 g.mkdp_echo_preview_url = true
 g.mkdp_theme = 'dark'
 
