@@ -23,6 +23,7 @@ vim.filetype.add({
         -- rkt = "racket",
         urdf = "xml",
         scxml = "xml",
+        kksrc = "confini",
     },
     filename = {
         -- environment = "dosini",
