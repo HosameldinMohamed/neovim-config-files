@@ -63,26 +63,18 @@ nvimtree.setup({
     },
 })
 
+-- for [No Name] buffers
 local function open_nvim_tree(data)
 
-    -- buffer is a directory
-    local directory = vim.fn.isdirectory(data.file) == 1
+  -- buffer is a [No Name]
+  local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
 
-    if not directory then
-        return
-    end
+  if not no_name then
+    return
+  end
 
-    -- create a new, empty buffer
-    vim.cmd.enew()
-
-    -- wipe the directory buffer
-    vim.cmd.bw(data.buf)
-
-    -- change to the directory
-    vim.cmd.cd(data.file)
-
-    -- open the tree
-    require("nvim-tree.api").tree.open()
+  -- open the tree, find the file and focus the tree
+  require("nvim-tree.api").tree.toggle({ focus = true, find_file = true, })
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
