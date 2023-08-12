@@ -164,6 +164,9 @@ return packer.startup(function(use)
         end
     }
 
+    -- Better folding
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
     config = function ()

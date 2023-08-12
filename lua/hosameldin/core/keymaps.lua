@@ -127,3 +127,7 @@ keymap.set("n", "<leader>b", ":BlamerToggle<CR>")
 
 -- DiffView
 keymap.set("n", "<leader>d", ":DiffviewOpen<CR>")
+
+-- folding using nvim-ufo
+keymap.set('n', 'zR', require('ufo').openAllFolds)
+keymap.set('n', 'zM', require('ufo').closeAllFolds)

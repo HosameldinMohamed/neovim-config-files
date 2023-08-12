@@ -19,5 +19,6 @@ require("hosameldin.plugins.auto-save")
 require("hosameldin.plugins.vim-illuminate")
 require("hosameldin.plugins.harpoon")
 require("hosameldin.plugins.indent-blankline")
+require("hosameldin.plugins.nvim-ufo")
 require("hosameldin.core.filetype")
 

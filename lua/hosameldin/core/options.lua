@@ -1,6 +1,7 @@
 local opt = vim.opt -- for conciseness
 local g = vim.g -- for conciseness
 local api = vim.api -- for conciseness
+local o = vim.o -- for conciseness
 
 -- line numbers
 opt.relativenumber = true
@@ -101,4 +102,10 @@ g.Tex_FoldedSections     = ""
 g.Tex_FoldedEnvironments = ""
 g.Tex_FoldedMisc         = ""
 -- g.vimtex_view_general_viewer = 'okular'
+
+-- For folding using nvim-ufo
+o.foldcolumn = '0' -- '0' is not bad
+o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+o.foldlevelstart = 99
+o.foldenable = true
 
