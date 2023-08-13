@@ -9,6 +9,7 @@ return {
         Check = " ",
         -- ChevronRight = "",
         ChevronRight = ">",
+        TriangleRight = "",
         Circle = " ",
         Close = " ",
         Code = " ",

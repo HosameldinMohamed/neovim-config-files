@@ -47,7 +47,7 @@ end
 local function get_location()
     local location = navic.get_location()
     if not utils.is_empty(location) then
-        return "%#WinBarContext#" .. " " .. icons.ui.ChevronRight .. " " .. location .. "%*"
+        return "%#WinBarContext#" .. " " .. icons.ui.TriangleRight .. " " .. location .. "%*"
     end
     return ""
 end
