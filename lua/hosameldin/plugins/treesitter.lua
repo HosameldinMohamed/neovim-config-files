@@ -9,7 +9,7 @@ treesitter.setup({
     -- enable syntax highlighting
     highlight = {
         enable = true,
-        disable = { "markdown" }, -- it doesn't seem to highlight right!
+        -- disable = { "markdown" }, -- it doesn't seem to highlight right!
     },
     -- enable indentation
     indent = { enable = false },
