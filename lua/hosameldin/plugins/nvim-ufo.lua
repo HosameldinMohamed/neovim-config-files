@@ -43,3 +43,8 @@ ufo.setup({
     fold_virt_text_handler = handler
 })
 
+-- disable folding for Tex files
+vim.api.nvim_create_autocmd( "FileType" , {
+    pattern = "tex",
+    command = "set nofoldenable" })
+
