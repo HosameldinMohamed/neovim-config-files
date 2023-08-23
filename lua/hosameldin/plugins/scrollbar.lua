@@ -5,10 +5,13 @@ if not setup then
 end
 
 -- configure/enable scrollbar
-scrollbar.setup()
-
-require("scrollbar.handlers.search").setup({
-    override_lens = function() end,
+scrollbar.setup({
+    handle = {
+        blend = 30,
+    },
+    handlers = {
+        gitsigns = true, -- Requires gitsigns
+        search = true, -- Requires hlslens
+    },
 })
 
-require("scrollbar.handlers.gitsigns").setup()
