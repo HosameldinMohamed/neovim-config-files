@@ -167,6 +167,11 @@ return packer.startup(function(use)
     -- Better folding
     use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
+    -- Noice
+    use {'rcarriga/nvim-notify'}
+    use {'MunifTanjim/nui.nvim'}
+    use {'folke/noice.nvim'}
+
     -- colorful-window seperator
     --[[ use{"nvim-zh/colorful-winsep.nvim",
     config = function ()
