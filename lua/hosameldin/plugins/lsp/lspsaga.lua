@@ -18,6 +18,8 @@ saga.setup({
     },
     symbol_in_winbar = {
         enable = false,
+        show_file = false,
+        folder_level = 2,
     },
     outline = {
         win_width = 50,

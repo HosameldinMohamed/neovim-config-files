@@ -34,6 +34,7 @@ local colors = {
     lightbg2 = "#333b41",
     pmenu_bg = "#83c092",
     folder_bg = "#7393b3",
+    total_black = '#000000',
     -- bright = {
         --     black = '#373b41',
         --     red = '#cc6666',

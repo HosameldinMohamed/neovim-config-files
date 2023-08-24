@@ -4,29 +4,15 @@ local icons = require "hosameldin.config.icons"
 local colors = require "hosameldin.config.colors"
 local navic = require "nvim-navic"
 local utils = require "hosameldin.utils.useful-functions"
+local saga = require "lspsaga.symbol.winbar"
 local options = {
   section_separators = { left = '', right = '' },
   component_separators = { left = '', right = '' }
 }
 
-vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.darker_black })
-vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red, bg = colors.darker_black })
-vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.white, bg = colors.darker_black })
-
-M.winbar_filetype_exclude = {
-    "help",
-    "startify",
-    "dashboard",
-    "packer",
-    "neogitstatus",
-    "NvimTree",
-    "Trouble",
-    "alpha",
-    "lir",
-    "Outline",
-    "spectre_panel",
-    "toggleterm",
-}
+vim.api.nvim_set_hl(0, "WinBarSeparator", { fg = colors.total_black })
+vim.api.nvim_set_hl(0, "WinBarFilename", { fg = colors.red })
+vim.api.nvim_set_hl(0, "WinBarContext", { fg = colors.white })
 
 local excludes = function()
     if vim.tbl_contains(M.winbar_filetype_exclude, vim.bo.filetype) then
@@ -75,6 +61,26 @@ function M.get_winbar()
         .. get_modified()
         .. "%#WinBarSeparator#"
         .. options.section_separators.left
+        .. "%="
+        .. "%*"
+    end
+end
+
+function M.get_lspsaga_winbar()
+
+    local saga_bar = saga.get_bar()
+    if not utils.is_empty(saga_bar) then
+        return get_modified()
+        .. "%#WinBarContext#"
+        .. " "
+        .. icons.ui.TriangleRight
+        .. " "
+        .. saga_bar
+        .. "%*"
+        .. "%#WinBarSeparator#"
+    else
+        return  get_modified()
+        .. "%#WinBarSeparator#"
         .. "%="
         .. "%*"
     end

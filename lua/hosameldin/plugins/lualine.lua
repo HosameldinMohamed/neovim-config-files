@@ -26,6 +26,7 @@ lualine.setup {
                 "toggleterm",
             },
         },
+        theme = 'codedark',
     },
     sections = {
         lualine_a = { {
@@ -47,15 +48,15 @@ lualine.setup {
     winbar = {
         lualine_a = { "mode" },
         lualine_b = { { "filetype" , icon_only = true } },
-        lualine_c = { winbar.get_winbar },
+        lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
         lualine_y = {},
         lualine_z = {},
     },
     inactive_winbar = {
-        lualine_a = { "mode" },
-        lualine_b = { { "filetype" , icon_only = true } },
-        lualine_c = { winbar.get_winbar },
+        lualine_a = {},
+        lualine_b = { { "filetype" , icon_only = true , colored = false } },
+        lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
         lualine_y = {},
         lualine_z = {},
