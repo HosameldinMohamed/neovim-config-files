@@ -10,7 +10,8 @@ saga.setup({
     finder = {
         keys = {
             vsplit = 'v'
-        }
+        },
+        layout = 'normal';
     },
     symbol_in_winbar = {
         enable = false,

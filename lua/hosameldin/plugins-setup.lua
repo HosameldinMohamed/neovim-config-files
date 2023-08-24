@@ -80,7 +80,7 @@ return packer.startup(function(use)
     -- configuring lsp servers
     use("neovim/nvim-lspconfig") -- easily configure language servers
     use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-    use("nvimdev/lspsaga.nvim")
+    use({ "nvimdev/lspsaga.nvim", commit = "4cad6da6e05b7651ca8f66ec1fb3a824395ada68" })
     use("ray-x/lsp_signature.nvim") -- for functions signatures
 
     use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
