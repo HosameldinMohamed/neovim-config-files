@@ -9,9 +9,12 @@ saga.setup({
     -- refer to https://dev.neovim.pro/lspsaga/finder/
     finder = {
         keys = {
-            vsplit = 'v'
+            vsplit = 'v',
+            split = 's',
         },
-        layout = 'normal';
+        layout = 'normal',
+        max_height = 0.3,
+        left_width = 0.5,
     },
     symbol_in_winbar = {
         enable = false,
