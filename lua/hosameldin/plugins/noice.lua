@@ -26,5 +26,8 @@ noice.setup({
     cmdline = {
         view = "cmdline_popup",
     },
+    messages = {
+        view_search = false,
+    },
 })
 
