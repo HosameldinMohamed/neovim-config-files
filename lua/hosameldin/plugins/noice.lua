@@ -29,5 +29,42 @@ noice.setup({
     messages = {
         view_search = false,
     },
+    views = {
+        cmdline_popup = {
+            position = {
+                row = 10,
+                col = "50%",
+            },
+            size = {
+                min_width = 60,
+                width = "auto",
+                height = "auto",
+            },
+        },
+        cmdline_popupmenu = {
+            relative = "editor",
+            position = {
+                row = 13,
+                col = "50%",
+            },
+            size = {
+                width = 60,
+                height = "auto",
+                max_height = 15,
+            },
+            border = {
+                style = "rounded",
+                padding = { 0, 1 },
+            },
+            win_options = {
+                winhighlight = { Normal = "Normal", FloatBorder = "NoiceCmdlinePopupBorder" },
+            },
+        },
+    },
 })
+
+-- change color for some highlight groups
+-- see https://github.com/folke/noice.nvim#-highlight-groups
+vim.cmd([[ highlight NoiceCmdlinePopupBorder guifg=#E9AE1A ]])
+vim.cmd([[ highlight NoiceCmdlinePopupTitle guifg=#E9AE1A ]])
 
