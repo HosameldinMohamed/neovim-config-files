@@ -1,6 +1,6 @@
-require("hosameldin.plugins-setup")
-require("hosameldin.core.options")
+require("hosameldin.lazy")
 require("hosameldin.core.keymaps")
+require("hosameldin.core.options")
 require("hosameldin.core.colorscheme")
 require("hosameldin.plugins.comment")
 require("hosameldin.plugins.nvim-tree")
