@@ -9,9 +9,11 @@ local colors = require("hosameldin.config.colors")
 
 lualine.setup {
     options = {
-        disabled_filetypes = {
+        disabled_filetypes =
+        {
             statusline = {},
-            winbar = {
+            winbar =
+            {
                 "help",
                 "startify",
                 "dashboard",
@@ -26,28 +28,57 @@ lualine.setup {
                 "toggleterm",
             },
         },
-        theme = 'codedark',
+        theme = 'auto',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
     },
-    sections = {
-        lualine_a = { {
-            'mode',
-            icons_enabled = true,
-            icon = nil,
-        } },
-        lualine_c = { {
-            'filename',
-            path = 1,
-            symbols = {
-                modified = icons.ui.Pencil,
-                readonly = icons.ui.Lock,
-                newfile = icons.ui.NewFile,
-                unnamed = icons.ui.Question,
+    sections =
+    {
+        lualine_a =
+        {
+            {
+                'mode',
+                icons_enabled = true,
+                icon = { '' },
             },
-        }, },
-        lualine_x = {{ require("noice").api.statusline.mode.get,
-        cond = require("noice").api.statusline.mode.has,
-        color = { fg = "#ff9e64" }, },
-        'encoding', 'fileformat', 'filetype'},
+        },
+        lualine_b =
+        {
+            { 'branch', icon = '' },
+            {
+                'diff' ,
+                symbols =
+                { added = '󰐖 ', modified = '󰦓 ', removed = '󰍵 ' },
+            },
+            {
+                'diagnostics' ,
+                symbols =
+                { error = ' ', warn = ' ', hint = ' ', info = ' ', },
+            },
+        },
+        lualine_c =
+        {
+            {
+                'filename',
+                path = 1,
+                symbols =
+                {
+                    modified = icons.ui.Pencil,
+                    readonly = icons.ui.Lock,
+                    newfile = icons.ui.NewFile,
+                    unnamed = icons.ui.Question,
+                },
+            },
+        },
+        lualine_x =
+        {
+            {
+                require("noice").api.statusline.mode.get,
+                cond = require("noice").api.statusline.mode.has,
+                color = { fg = "#ff9e64" },
+            },
+            'encoding', 'fileformat', 'filetype'
+        },
     },
     winbar = {
         lualine_a = { "mode" },
