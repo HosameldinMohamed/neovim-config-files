@@ -12,8 +12,8 @@ saga.setup({
             vsplit = 'v',
             split = 's',
         },
-        layout = 'normal',
-        max_height = 0.3,
+        layout = 'float',
+        max_height = 0.5,
         left_width = 0.5,
     },
     symbol_in_winbar = {
