@@ -85,23 +85,23 @@ keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR
 -- add file
 keymap.set("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
 -- Navigate to file 1
-keymap.set("n", "<leader>h1", ":lua require('harpoon.ui').nav_file(1)<CR>")
+keymap.set("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
 -- Navigate to file 2
-keymap.set("n", "<leader>h2", ":lua require('harpoon.ui').nav_file(2)<CR>")
+keymap.set("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
 -- Navigate to file 3
-keymap.set("n", "<leader>h3", ":lua require('harpoon.ui').nav_file(3)<CR>")
+keymap.set("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
 -- Navigate to file 4
-keymap.set("n", "<leader>h4", ":lua require('harpoon.ui').nav_file(4)<CR>")
+keymap.set("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
 -- Navigate to file 5
-keymap.set("n", "<leader>h5", ":lua require('harpoon.ui').nav_file(5)<CR>")
+keymap.set("n", "<leader>5", ":lua require('harpoon.ui').nav_file(5)<CR>")
 -- Navigate to file 6
-keymap.set("n", "<leader>h6", ":lua require('harpoon.ui').nav_file(6)<CR>")
+keymap.set("n", "<leader>6", ":lua require('harpoon.ui').nav_file(6)<CR>")
 -- Navigate to file 7
-keymap.set("n", "<leader>h7", ":lua require('harpoon.ui').nav_file(7)<CR>")
+keymap.set("n", "<leader>7", ":lua require('harpoon.ui').nav_file(7)<CR>")
 -- Navigate to file 8
-keymap.set("n", "<leader>h8", ":lua require('harpoon.ui').nav_file(8)<CR>")
+keymap.set("n", "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>")
 -- Navigate to file 9
-keymap.set("n", "<leader>h9", ":lua require('harpoon.ui').nav_file(9)<CR>")
+keymap.set("n", "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>")
 -- Navigate to next file
 keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>")
 -- Navigate to previous file
