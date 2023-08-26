@@ -11,7 +11,10 @@ lualine.setup {
     options = {
         disabled_filetypes =
         {
-            statusline = {},
+            statusline =
+            {
+                "NvimTree",
+            },
             winbar =
             {
                 "help",
@@ -29,7 +32,7 @@ lualine.setup {
             },
         },
         theme = 'auto',
-        component_separators = { left = '', right = ''},
+        component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
     },
     sections =
@@ -82,7 +85,9 @@ lualine.setup {
                 cond = require("noice").api.status.search.has,
                 color = { fg = "#ff9e64" },
             },
-            'encoding', 'fileformat', 'filetype'
+            'encoding',
+            { 'fileformat' , symbols = { unix = '󰌽', } },
+            'filetype',
         },
     },
     winbar = {
