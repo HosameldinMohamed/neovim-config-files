@@ -90,6 +90,12 @@ lualine.setup {
             'filetype',
         },
     },
+    inactive_sections = {
+        lualine_a =
+        {
+            { 'branch', icon = '' },
+        },
+    },
     winbar = {
         lualine_a = { "mode" },
         lualine_b = { { "filetype" , icon_only = true } },
