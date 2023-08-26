@@ -24,8 +24,8 @@ nvimtree.setup({
         icons = {
             glyphs = {
                 folder = {
-                    arrow_closed = "", -- arrow when folder is closed
-                    arrow_open = "", -- arrow when folder is open
+                    arrow_closed = "", -- arrow when folder is closed
+                    arrow_open = "", -- arrow when folder is open
                 },
                 git = {
                     unstaged = "",
@@ -68,15 +68,15 @@ nvimtree.setup({
 -- for [No Name] buffers
 local function open_nvim_tree(data)
 
-  -- buffer is a [No Name]
-  local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+    -- buffer is a [No Name]
+    local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
 
-  if not no_name then
-    return
-  end
+    if not no_name then
+        return
+    end
 
-  -- open the tree, find the file and focus the tree
-  require("nvim-tree.api").tree.toggle({ focus = true, find_file = true, })
+    -- open the tree, find the file and focus the tree
+    require("nvim-tree.api").tree.toggle({ focus = false, find_file = true, })
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
