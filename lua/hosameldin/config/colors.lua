@@ -35,16 +35,16 @@ local colors = {
     pmenu_bg = "#83c092",
     folder_bg = "#7393b3",
     total_black = '#000000',
-    -- bright = {
-        --     black = '#373b41',
-        --     red = '#cc6666',
-        --     green = '#b5bd68',
-        --     yellow = '#f0c674',
-        --     blue = '#81a2be',
-        --     magenta = '#b294bb',
-        --     cyan = '#8abeb7',
-        --     white = '#c5c8c6',
-        -- },
+    bright = {
+            black = '#373b41',
+            red = '#cc6666',
+            green = '#b5bd68',
+            yellow = '#f0c674',
+            blue = '#81a2be',
+            magenta = '#b294bb',
+            cyan = '#8abeb7',
+            white = '#c5c8c6',
+        },
     }
 
     return colors

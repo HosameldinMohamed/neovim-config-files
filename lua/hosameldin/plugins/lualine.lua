@@ -83,7 +83,7 @@ lualine.setup {
             {
                 require("noice").api.status.search.get,
                 cond = require("noice").api.status.search.has,
-                color = { fg = "#ff9e64" },
+                color = { fg = colors.bright.green },
             },
             'encoding',
             { 'fileformat' , symbols = { unix = '󰌽', } },
@@ -94,6 +94,20 @@ lualine.setup {
         lualine_a =
         {
             { 'branch', icon = '' },
+        },
+        lualine_c =
+        {
+            {
+                'filename',
+                path = 1,
+                symbols =
+                {
+                    modified = icons.ui.Pencil,
+                    readonly = icons.ui.Lock,
+                    newfile = icons.ui.NewFile,
+                    unnamed = icons.ui.Question,
+                },
+            },
         },
     },
     winbar = {
