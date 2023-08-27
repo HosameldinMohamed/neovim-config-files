@@ -173,7 +173,7 @@ lualine.setup {
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
         lualine_y = { { "buffers" , max_length = vim.o.columns / 3 , use_mode_colors = true } },
-        lualine_z = { "mode" },
+        lualine_z = {},
     },
     inactive_winbar = {
         lualine_a = { "mode" },
@@ -181,7 +181,7 @@ lualine.setup {
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
         lualine_y = { { "buffers" , max_length = vim.o.columns / 3 , use_mode_colors = true } },
-        lualine_z = { "mode" },
+        lualine_z = {},
     },
 }
 
