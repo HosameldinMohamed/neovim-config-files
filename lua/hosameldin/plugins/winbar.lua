@@ -81,8 +81,6 @@ function M.get_lspsaga_winbar()
     else
         return  get_modified()
         .. "%#WinBarSeparator#"
-        .. "%="
-        .. "%*"
     end
 end
 

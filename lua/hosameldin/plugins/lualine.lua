@@ -6,6 +6,54 @@ end
 local winbar = require("hosameldin.plugins.winbar")
 local icons = require("hosameldin.config.icons")
 local colors = require("hosameldin.config.colors")
+local custom_auto_theme = require("lualine.themes.auto")
+
+local theme_colors =
+{
+    normal        = '#58c3ff',
+    normal_dark   = '#0e2029',
+    insert        = '#bce77f',
+    insert_dark   = '#232917',
+    visual        = '#d84cff',
+    visual_dark   = '#230c29',
+    replace       = '#eb4d82',
+    replace_dark  = '#290d18',
+    command       = '#d1b983',
+    command_dark  = '#29251b',
+}
+
+-- remove the backgroundi of lualine_c section for normal mode
+custom_auto_theme.normal.c.bg = ''
+-- remove the backgroundi of inactive sections
+custom_auto_theme.inactive.c.bg = ''
+-- make words in modes boldfaced
+custom_auto_theme.normal.a.gui = 'bold'
+custom_auto_theme.insert.a.gui = 'bold'
+custom_auto_theme.visual.a.gui = 'bold'
+custom_auto_theme.replace.a.gui = 'bold'
+custom_auto_theme.command.a.gui = 'bold'
+custom_auto_theme.inactive.a.gui = 'bold'
+-- change the backgrounds of the modes
+-- normal
+custom_auto_theme.normal.a.bg = theme_colors.normal
+custom_auto_theme.normal.b.fg = theme_colors.normal
+custom_auto_theme.normal.b.bg = theme_colors.normal_dark
+-- insert
+custom_auto_theme.insert.a.bg = theme_colors.insert
+custom_auto_theme.insert.b.fg = theme_colors.insert
+custom_auto_theme.insert.b.bg = theme_colors.insert_dark
+-- visual
+custom_auto_theme.visual.a.bg = theme_colors.visual
+custom_auto_theme.visual.b.fg = theme_colors.visual
+custom_auto_theme.visual.b.bg = theme_colors.visual_dark
+-- replace
+custom_auto_theme.replace.a.bg = theme_colors.replace
+custom_auto_theme.replace.b.fg = theme_colors.replace
+custom_auto_theme.replace.b.bg = theme_colors.replace_dark
+-- command
+custom_auto_theme.command.a.bg = theme_colors.command
+custom_auto_theme.command.b.fg = theme_colors.command
+custom_auto_theme.command.b.bg = theme_colors.command_dark
 
 lualine.setup {
     options = {
@@ -31,7 +79,7 @@ lualine.setup {
                 "toggleterm",
             },
         },
-        theme = 'auto',
+        theme = custom_auto_theme,
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
     },
@@ -63,6 +111,7 @@ lualine.setup {
         {
             {
                 'filename',
+                newfile_status = false,
                 path = 1,
                 symbols =
                 {
@@ -93,6 +142,14 @@ lualine.setup {
     inactive_sections = {
         lualine_a =
         {
+            {
+                'mode',
+                icons_enabled = true,
+                icon = { '' },
+            },
+        },
+        lualine_b =
+        {
             { 'branch', icon = '' },
         },
         lualine_c =
@@ -115,16 +172,16 @@ lualine.setup {
         lualine_b = { { "filetype" , icon_only = true } },
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
+        lualine_y = { { "buffers" , max_length = vim.o.columns / 3 , use_mode_colors = true } },
+        lualine_z = { "mode" },
     },
     inactive_winbar = {
-        lualine_a = {},
+        lualine_a = { "mode" },
         lualine_b = { { "filetype" , icon_only = true , colored = false } },
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
+        lualine_y = { { "buffers" , max_length = vim.o.columns / 3 , use_mode_colors = true } },
+        lualine_z = { "mode" },
     },
 }
 
