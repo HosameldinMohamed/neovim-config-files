@@ -38,5 +38,10 @@ web_devicons.setup {
             color = "#e37933",
             name = "urdf"
         },
+        ["tex"] = {
+            icon = "󰙩",
+            color = "#f3c333",
+            name = "tex"
+        },
     };
 }
