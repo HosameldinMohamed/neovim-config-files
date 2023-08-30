@@ -102,6 +102,7 @@ g.Tex_FoldedSections     = ""
 g.Tex_FoldedEnvironments = ""
 g.Tex_FoldedMisc         = ""
 g.vimtex_quickfix_mode   = 0
+g.vimtex_syntax_enabled  = 0
 -- g.vimtex_view_general_viewer = 'okular'
 
 -- For folding using nvim-ufo
