@@ -3,20 +3,20 @@ local auto = require("lualine.themes.auto")
 local theme_colors =
 {
     normal         = '#58c3ff',
-    normal_dark    = '#0e2029',
-    normal_darker  = '#071015',
+    normal_dark    = '#112833',
+    normal_darker  = '#0a181f',
     insert         = '#bce77f',
-    insert_dark    = '#232917',
-    insert_darker  = '#12150c',
+    insert_dark    = '#2c331d',
+    insert_darker  = '#1b1f12',
     visual         = '#d84cff',
-    visual_dark    = '#230c29',
-    visual_darker  = '#120615',
+    visual_dark    = '#2b0f33',
+    visual_darker  = '#1b091f',
     replace        = '#eb4d82',
-    replace_dark   = '#290d18',
-    replace_darker = '#15070c',
+    replace_dark   = '#33101e',
+    replace_darker = '#1f0a12',
     command        = '#d1b983',
-    command_dark   = '#29251b',
-    command_darker = '#15130e',
+    command_dark   = '#332e22',
+    command_darker = '#1f1c15',
 }
 
 return {
