@@ -161,4 +161,11 @@ require('lazy').setup({
     'rcarriga/nvim-notify',
     'MunifTanjim/nui.nvim',
     'folke/noice.nvim',
+
+    -- hardtime nvim
+    {
+       "m4xshen/hardtime.nvim",
+       dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+       opts = { enabled = false, }
+    },
 })
