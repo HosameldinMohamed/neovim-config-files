@@ -70,17 +70,9 @@ function M.get_lspsaga_winbar()
 
     local saga_bar = saga.get_bar()
     if not utils.is_empty(saga_bar) then
-        return get_modified()
-        .. "%#WinBarContext#"
-        .. " "
-        .. icons.ui.TriangleRight
-        .. " "
-        .. saga_bar
-        .. "%*"
-        .. "%#WinBarSeparator#"
+        return saga_bar
     else
-        return  get_modified()
-        .. "%#WinBarSeparator#"
+        return ""
     end
 end
 

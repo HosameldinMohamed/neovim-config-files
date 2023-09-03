@@ -115,7 +115,20 @@ lualine.setup {
         },
     },
     winbar = {
-        lualine_a = { "mode" },
+        lualine_a =
+        {
+            {
+                'filename',
+                path = 0,
+                symbols =
+                {
+                    modified = icons.ui.Pencil,
+                    readonly = icons.ui.Lock,
+                    newfile = icons.ui.NewFile,
+                    unnamed = icons.ui.Question,
+                },
+            },
+        },
         lualine_b = { { "filetype" , icon_only = true } },
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
@@ -130,9 +143,22 @@ lualine.setup {
         lualine_z = { { 'progress' }, },
     },
     inactive_winbar = {
-        lualine_a = { "mode" },
+        lualine_a =
+        {
+            {
+                'filename',
+                path = 0,
+                symbols =
+                {
+                    modified = icons.ui.Pencil,
+                    readonly = icons.ui.Lock,
+                    newfile = icons.ui.NewFile,
+                    unnamed = icons.ui.Question,
+                },
+            },
+        },
         lualine_b = { { "filetype" , icon_only = true , colored = false } },
-        lualine_c = { winbar.get_lspsaga_winbar },
+        lualine_c = {},
         lualine_x = {},
         lualine_y =
         {
