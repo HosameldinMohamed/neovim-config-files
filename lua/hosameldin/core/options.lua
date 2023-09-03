@@ -56,9 +56,11 @@ local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = {"nightfly"},
     callback = function()
-        vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = nightfly_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = nightfly_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = nightfly_hl })
+        api.nvim_set_hl(0, "IlluminatedWordText", { bg = nightfly_hl })
+        api.nvim_set_hl(0, "IlluminatedWordRead", { bg = nightfly_hl })
+        api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = nightfly_hl })
+        -- Remove separator highlight
+        vim.cmd([[hi WinSeparator guibg=NONE]])
     end,
     group = custom_highlight,
 })
@@ -67,9 +69,11 @@ local kanagawa_hl = "#404052"
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = {"kanagawa"},
     callback = function()
-        vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = kanagawa_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = kanagawa_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = kanagawa_hl })
+        api.nvim_set_hl(0, "IlluminatedWordText", { bg = kanagawa_hl })
+        api.nvim_set_hl(0, "IlluminatedWordRead", { bg = kanagawa_hl })
+        api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = kanagawa_hl })
+        -- Remove separator highlight
+        vim.cmd([[hi WinSeparator guibg=NONE]])
     end,
     group = custom_highlight,
 })
@@ -78,9 +82,11 @@ local catppuccin_hl = "#31314C"
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = {"catppuccin"},
     callback = function()
-        vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = catppuccin_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = catppuccin_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = catppuccin_hl })
+        api.nvim_set_hl(0, "IlluminatedWordText", { bg = catppuccin_hl })
+        api.nvim_set_hl(0, "IlluminatedWordRead", { bg = catppuccin_hl })
+        api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = catppuccin_hl })
+        -- Remove separator highlight
+        vim.cmd([[hi WinSeparator guibg=NONE]])
     end,
     group = custom_highlight,
 })
@@ -89,9 +95,11 @@ local moonfly_hl = "#2B2B2B"
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = {"moonfly"},
     callback = function()
-        vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = moonfly_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = moonfly_hl })
-        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = moonfly_hl })
+        api.nvim_set_hl(0, "IlluminatedWordText", { bg = moonfly_hl })
+        api.nvim_set_hl(0, "IlluminatedWordRead", { bg = moonfly_hl })
+        api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = moonfly_hl })
+        -- Remove separator highlight
+        vim.cmd([[hi WinSeparator guibg=NONE]])
     end,
     group = custom_highlight,
 })
