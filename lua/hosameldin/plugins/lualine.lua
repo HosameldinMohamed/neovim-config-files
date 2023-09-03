@@ -13,9 +13,7 @@ lualine.setup {
         disabled_filetypes =
         {
             statusline =
-            {
-                "NvimTree",
-            },
+            {},
             winbar =
             {
                 "help",
@@ -35,6 +33,7 @@ lualine.setup {
         theme = my_theme,
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
+        globalstatus = true,
     },
     sections =
     {
@@ -53,11 +52,6 @@ lualine.setup {
                 'diff' ,
                 symbols =
                 { added = '󰐖 ', modified = '󰦓 ', removed = '󰍵 ' },
-            },
-            {
-                'diagnostics' ,
-                symbols =
-                { error = ' ', warn = ' ', hint = ' ', info = ' ', },
             },
         },
         lualine_c =
@@ -125,16 +119,30 @@ lualine.setup {
         lualine_b = { { "filetype" , icon_only = true } },
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
-        lualine_y = { { "buffers" , max_length = vim.o.columns / 3 , use_mode_colors = true } },
-        lualine_z = {},
+        lualine_y =
+        {
+            {
+                'diagnostics' ,
+                symbols =
+                { error = ' ', warn = ' ', hint = ' ', info = ' ', },
+            },
+        },
+        lualine_z = { { 'progress' }, },
     },
     inactive_winbar = {
         lualine_a = { "mode" },
         lualine_b = { { "filetype" , icon_only = true , colored = false } },
         lualine_c = { winbar.get_lspsaga_winbar },
         lualine_x = {},
-        lualine_y = { { "buffers" , max_length = vim.o.columns / 3 , use_mode_colors = true } },
-        lualine_z = {},
+        lualine_y =
+        {
+            {
+                'diagnostics' ,
+                symbols =
+                { error = ' ', warn = ' ', hint = ' ', info = ' ', },
+            },
+        },
+        lualine_z = { { 'progress' }, },
     },
 }
 
