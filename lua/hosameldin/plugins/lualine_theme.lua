@@ -21,32 +21,32 @@ local theme_colors =
 
 return {
   normal = {
-    a = {bg = theme_colors.normal, fg = auto.normal.a.fg, gui = 'bold'},
+    a = {bg = theme_colors.normal, fg = auto.normal.a.fg},
     b = {bg = theme_colors.normal_dark, fg = theme_colors.normal},
     c = {bg = theme_colors.normal_darker, fg = auto.normal.c.fg}
   },
   insert = {
-    a = {bg = theme_colors.insert, fg = auto.insert.a.fg, gui = 'bold'},
+    a = {bg = theme_colors.insert, fg = auto.insert.a.fg},
     b = {bg = theme_colors.insert_dark, fg = theme_colors.insert},
     c = {bg = theme_colors.insert_darker, fg = auto.normal.c.fg}
   },
   visual = {
-    a = {bg = theme_colors.visual, fg = auto.visual.a.fg, gui = 'bold'},
+    a = {bg = theme_colors.visual, fg = auto.visual.a.fg},
     b = {bg = theme_colors.visual_dark, fg = theme_colors.visual},
     c = {bg = theme_colors.visual_darker, fg = auto.normal.c.fg}
   },
   replace = {
-    a = {bg = theme_colors.replace, fg = auto.replace.a.fg, gui = 'bold'},
+    a = {bg = theme_colors.replace, fg = auto.replace.a.fg},
     b = {bg = theme_colors.replace_dark, fg = theme_colors.replace},
     c = {bg = theme_colors.replace_darker, fg = auto.normal.c.fg}
   },
   command = {
-    a = {bg = theme_colors.command, fg = auto.command.a.fg, gui = 'bold'},
+    a = {bg = theme_colors.command, fg = auto.command.a.fg},
     b = {bg = theme_colors.command_dark, fg = theme_colors.command},
     c = {bg = theme_colors.command_darker, fg = auto.normal.c.fg}
   },
   inactive = {
-    a = {bg = auto.inactive.a.bg, fg = auto.inactive.a.fg, gui = 'bold'},
+    a = {bg = auto.inactive.a.bg, fg = auto.inactive.a.fg},
     b = {bg = auto.inactive.b.bg, fg = auto.inactive.b.fg},
     c = {bg = auto.inactive.b.bg, fg = auto.inactive.c.fg}
   }
