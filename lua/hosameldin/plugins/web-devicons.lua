@@ -24,7 +24,7 @@ web_devicons.setup {
     -- takes effect when `strict` is true
     override_by_extension = {
         ["m"] = {
-            icon = "󰘨",
+            icon = "",
             color = "#ff7614",
             name = "matlab"
         },
