@@ -105,7 +105,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 -- VimTex
-g.vimtex_view_method = 'zathura'
+g.vimtex_view_method = 'zathura_simple'
 g.Tex_FoldedSections     = ""
 g.Tex_FoldedEnvironments = ""
 g.Tex_FoldedMisc         = ""
