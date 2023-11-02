@@ -139,7 +139,7 @@ require('lazy').setup({
     { 'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim' },
 
     -- indent-blankline
-    { 'lukas-reineke/indent-blankline.nvim' },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
     -- octo (GitHub plugin)
     {

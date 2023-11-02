@@ -1,4 +1,4 @@
-local setup, indent = pcall(require, "indent_blankline")
+local setup, indent = pcall(require, "ibl")
 if not setup then
     return
 end
@@ -6,9 +6,5 @@ end
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 
-indent.setup({
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
-})
+indent.setup()
 
