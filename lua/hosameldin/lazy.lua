@@ -169,6 +169,17 @@ require('lazy').setup({
        opts = { enabled = false, }
     },
 
+    -- codewindow
+    {
+        'gorbit99/codewindow.nvim',
+        init = function()
+            require('codewindow').apply_default_keybinds()
+        end,
+        opts = {
+            -- here you can paste configuration block
+        },
+    },
+
     -- Firenvim
     {
         'glacambre/firenvim',
