@@ -7,6 +7,7 @@ My setup files for [Neovim](https://neovim.io/).
 Install the following packages:
 
 - `neovim`.
+- `python-pynvim`.
 
 Dependencies for some plugins:
 
@@ -23,6 +24,7 @@ LSP servers for some languages:
 - `qml-lsp` (`qt6-languageserver`).
 
 Also `npm` package manager for [`Mason`](https://github.com/williamboman/mason.nvim) to automatically download and install LSP servers and linters.
+Also, `unzip`, needed by `Mason`.
 
 Make a backup of the current nvim folder if exists
 
