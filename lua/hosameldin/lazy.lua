@@ -142,17 +142,17 @@ require('lazy').setup({
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
     -- octo (GitHub plugin)
-    {
-        'pwntester/octo.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope.nvim',
-            'nvim-tree/nvim-web-devicons',
-        },
-        config = function ()
-            require('octo').setup()
-        end
-    },
+    -- {
+    --     'pwntester/octo.nvim',
+    --     dependencies = {
+    --         'nvim-lua/plenary.nvim',
+    --         'nvim-telescope/telescope.nvim',
+    --         'nvim-tree/nvim-web-devicons',
+    --     },
+    --     config = function ()
+    --         require('octo').setup()
+    --     end
+    -- },
 
     -- Better folding
     { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
