@@ -191,4 +191,16 @@ require('lazy').setup({
             vim.fn["firenvim#install"](0)
         end
     },
+
+    -- Screen Saver
+    {
+        "folke/drop.nvim",
+        event = "VimEnter",
+        config = function()
+            require("drop").setup({
+                theme = "leaves", -- it be set to leaves, snow, stars, xmas, spring or summer
+                screensaver = 1000 * 60 * 5,
+            })
+        end,
+    },
 })
