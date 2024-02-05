@@ -199,7 +199,8 @@ require('lazy').setup({
         config = function()
             require("drop").setup({
                 theme = "leaves", -- it be set to leaves, snow, stars, xmas, spring or summer
-                screensaver = 1000 * 60 * 5,
+                -- screensaver = 1000 * 60 * 5,
+                screensaver = false,
             })
         end,
     },
