@@ -133,6 +133,3 @@ keymap.set("n", "<leader>nd", function()
   require("noice").cmd("dismiss")
 end)
 
--- Swith to Normal mode in terminal
-keymap.set('t', "<Esc>", "<C-\\><C-n>")
-
