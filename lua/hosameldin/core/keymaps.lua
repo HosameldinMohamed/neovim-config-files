@@ -79,35 +79,33 @@ keymap.set("n", "<leader>gg", ":LazyGit<CR>") -- Open LazyGit
 -- spellcheck
 keymap.set("n", "<leader>sp", ":set spell!<CR>")
 
--- Harpoon
+-- Grapple
 -- toggle menu
-keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+keymap.set("n", "<leader>hh", require("grapple").toggle_tags)
 -- add file
-keymap.set("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
+keymap.set("n", "<leader>ha", require("grapple").toggle)
 -- Navigate to file 1
-keymap.set("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
+keymap.set("n", "<leader>1", "<cmd>Grapple select index=1<CR>")
 -- Navigate to file 2
-keymap.set("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
+keymap.set("n", "<leader>2", "<cmd>Grapple select index=2<CR>")
 -- Navigate to file 3
-keymap.set("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
+keymap.set("n", "<leader>3", "<cmd>Grapple select index=3<CR>")
 -- Navigate to file 4
-keymap.set("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
+keymap.set("n", "<leader>4", "<cmd>Grapple select index=4<CR>")
 -- Navigate to file 5
-keymap.set("n", "<leader>5", ":lua require('harpoon.ui').nav_file(5)<CR>")
+keymap.set("n", "<leader>5", "<cmd>Grapple select index=5<CR>")
 -- Navigate to file 6
-keymap.set("n", "<leader>6", ":lua require('harpoon.ui').nav_file(6)<CR>")
+keymap.set("n", "<leader>6", "<cmd>Grapple select index=6<CR>")
 -- Navigate to file 7
-keymap.set("n", "<leader>7", ":lua require('harpoon.ui').nav_file(7)<CR>")
+keymap.set("n", "<leader>7", "<cmd>Grapple select index=7<CR>")
 -- Navigate to file 8
-keymap.set("n", "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>")
+keymap.set("n", "<leader>8", "<cmd>Grapple select index=8<CR>")
 -- Navigate to file 9
-keymap.set("n", "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>")
+keymap.set("n", "<leader>9", "<cmd>Grapple select index=9<CR>")
 -- Navigate to next file
-keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>")
+keymap.set("n", "<leader>hn", "<cmd>Grapple cycle_tags next<CR>")
 -- Navigate to previous file
-keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>")
--- Navigate to terminal 1
-keymap.set("n", "<leader>ht", ":lua require('harpoon.term').gotoTerminal(1)<CR>")
+keymap.set("n", "<leader>hp", "<cmd>Grapple cycle_tags prev<CR>")
 
 -- Auto-save
 keymap.set("n", "<leader>a", ":ASToggle<CR>")

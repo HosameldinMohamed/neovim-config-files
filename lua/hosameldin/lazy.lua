@@ -120,8 +120,13 @@ require('lazy').setup({
     -- Latex support
     'lervag/vimtex',
 
-    -- Harpoon
-    'ThePrimeagen/harpoon',
+    -- Grapple
+    {
+        "cbochs/grapple.nvim",
+        dependencies = {
+            { "nvim-tree/nvim-web-devicons", lazy = true }
+        },
+    },
 
     -- Auto-save
     'Pocco81/auto-save.nvim',
