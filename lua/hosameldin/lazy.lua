@@ -70,7 +70,7 @@ require('lazy').setup({
     -- configuring lsp servers
     'neovim/nvim-lspconfig', -- easily configure language servers
     'hrsh7th/cmp-nvim-lsp', -- for autocompletion
-    { 'nvimdev/lspsaga.nvim', commit = '4cad6da6e05b7651ca8f66ec1fb3a824395ada68' },
+    { 'nvimdev/lspsaga.nvim'},
     'ray-x/lsp_signature.nvim', -- for functions signatures
 
     'jose-elias-alvarez/typescript.nvim', -- additional functionality for typescript server (e.g. rename file & update imports)
