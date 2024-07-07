@@ -124,11 +124,12 @@ keymap.set('n', 'zR', require('ufo').openAllFolds)
 keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 -- Noice
+local noice = require('noice')
 keymap.set("n", "<leader>nl", function()
-  require("noice").cmd("last")
+    noice.cmd("last")
 end)
 keymap.set("n", "<leader>nd", function()
-  require("noice").cmd("dismiss")
+    noice.cmd("dismiss")
 end)
 
 -- DAP and DAP-UI
