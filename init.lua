@@ -24,5 +24,4 @@ require("hosameldin.plugins.nvim-ufo")
 -- require("hosameldin.plugins.noice")
 require("hosameldin.core.filetype")
 require("hosameldin.plugins.firenvim")
-require("hosameldin.plugins.nvim-dressing")
 

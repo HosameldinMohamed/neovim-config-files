@@ -272,10 +272,4 @@ require('lazy').setup({
             dapvirtext.setup()
         end
     },
-
-    -- dressing nvim
-    {
-        'stevearc/dressing.nvim',
-        opts = {},
-    }
 })
