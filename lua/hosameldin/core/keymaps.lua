@@ -131,3 +131,12 @@ keymap.set("n", "<leader>nd", function()
   require("noice").cmd("dismiss")
 end)
 
+-- DAP and DAP-UI
+keymap.set('n', '<leader>dt', ":DapToggleBreakpoint<CR>", {noremap=true})
+keymap.set('n', '<leader>dc', ":DapContinue<CR>", {noremap=true})
+keymap.set('n', '<leader>di', ":DapStepInto<CR>", {noremap=true})
+keymap.set('n', '<leader>do', ":DapStepOver<CR>", {noremap=true})
+keymap.set('n', '<leader>dl', ":DapShowLog<CR>", {noremap=true})
+keymap.set('n', '<leader>dr', ":lua require('dapui').open{reset = true}CR>", {noremap=true})
+keymap.set('n', '<leader>du', ":lua require('dapui').toggle()<CR>", {noremap=true})
+
