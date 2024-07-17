@@ -163,7 +163,18 @@ require('lazy').setup({
     { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
 
     -- Noice
-    'rcarriga/nvim-notify',
+    { 'rcarriga/nvim-notify',
+    config = function ()
+        require("notify").setup {
+            stages = 'fade_in_slide_out',
+            -- background_colour = 'FloatShadow',
+            timeout = 2000,
+            top_down = false,
+        }
+        vim.notify = require('notify')
+    end
+    },
+
     'MunifTanjim/nui.nvim',
     'folke/noice.nvim',
 
