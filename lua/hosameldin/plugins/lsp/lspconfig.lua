@@ -102,7 +102,7 @@ local on_attach = function(client, bufnr)
     keymap.set({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>", opts)
 
     -- typescript specific keymaps (e.g. rename file and update imports)
-    if client.name == "tsserver" then
+    if client.name == "ts_ls" then
         keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
     end
 
