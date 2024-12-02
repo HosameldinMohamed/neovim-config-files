@@ -64,12 +64,26 @@ require('lazy').setup({
     'quangnguyen30192/cmp-nvim-ultisnips',
 
     -- managing & installing lsp servers, linters & formatters
-    'williamboman/mason.nvim', -- in charge of managing lsp servers, linters & formatters
     'williamboman/mason-lspconfig.nvim', -- bridges gap b/w mason & lspconfig
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+
+    "williamboman/mason.nvim",
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+    },
 
     -- configuring lsp servers
-    'neovim/nvim-lspconfig', -- easily configure language servers
     'hrsh7th/cmp-nvim-lsp', -- for autocompletion
+    {
+        "neovim/nvim-lspconfig",
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            { "antosha417/nvim-lsp-file-operations", config = true },
+            { "folke/neodev.nvim", opts = {} },
+        },
+    },
     { 'nvimdev/lspsaga.nvim'},
     'ray-x/lsp_signature.nvim', -- for functions signatures
 
@@ -79,7 +93,6 @@ require('lazy').setup({
 
     -- formatting & linting
     'jose-elias-alvarez/null-ls.nvim', -- configure formatters & linters
-    'jayp0521/mason-null-ls.nvim', -- bridges gap b/w mason & null-ls
 
     -- treesitter configuration
     {
