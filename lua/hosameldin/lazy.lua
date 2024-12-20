@@ -301,4 +301,8 @@ require('lazy').setup({
             dapvirtext.setup()
         end
     },
+
+    {
+        "github/copilot.vim",
+    }
 })
