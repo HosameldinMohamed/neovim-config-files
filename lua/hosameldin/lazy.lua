@@ -103,7 +103,7 @@ require('lazy').setup({
     },
 
     -- Rainbow parentheses
-    'p00f/nvim-ts-rainbow',
+    'HiPhish/rainbow-delimiters.nvim',
 
     -- auto closing
     'windwp/nvim-autopairs', -- autoclose parens, brackets, quotes, etc...
